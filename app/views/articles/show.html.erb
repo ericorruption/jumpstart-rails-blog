@@ -9,6 +9,10 @@
   <% end %>
 </p>
 
+<% if @article.image.exists? %>
+  <p><%= image_tag @article.image.url(:thumb) %></p>
+<% end %>
+
 <p><%= @article.body %></p>
 
 <h2>Comments (<%= @article.comments.size %>)</h2>
