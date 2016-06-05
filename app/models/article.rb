@@ -1,9 +1,11 @@
 class Article < ActiveRecord::Base
+  belongs_to :author
   has_many :comments
   has_many :taggings
   has_many :tags, through: :taggings
   has_attached_file :image, styles: { medium: "300x300>", thumb: "100x100>" }
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
+  validates :author, presence: true
 
   # fake tag list attribute with methods
   def tag_list

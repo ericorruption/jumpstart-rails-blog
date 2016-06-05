@@ -1,7 +1,6 @@
 # Rails blog
 
 ## TODO
-* make the ownership of articles more explicit and secure
 * restrict articles to being edited only by their original owner
 * Add a site-wide sidebar that holds navigation links
 * Create month-based navigation links.
